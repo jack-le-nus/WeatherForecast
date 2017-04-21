@@ -23,10 +23,31 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tomorrow" image="Tomorrow" selectedImage="Tomorrow" id="a6x-e9-x7j"/>
+                    <connections>
+                        <segue destination="aA3-FP-k58" kind="show" identifier="showMap" id="MOM-i2-DSN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Icr-xe-nUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-444" y="-73"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dWL-1e-VZg">
+            <objects>
+                <viewController id="aA3-FP-k58" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UDr-FV-m7P"/>
+                        <viewControllerLayoutGuide type="bottom" id="F8c-TR-uik"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NBd-dr-qfO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ce-fj-HOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="-356"/>
         </scene>
         <!--Week-->
         <scene sceneID="TDZ-dV-FZa">
@@ -42,6 +63,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Week" image="Week" selectedImage="Week" id="4y5-RI-KH0"/>
+                    <connections>
+                        <segue destination="aA3-FP-k58" kind="show" identifier="showMap" id="YfT-CP-lDQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exf-mj-U2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,6 +85,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Today" image="Today" selectedImage="Today" id="w3I-XQ-OTO"/>
+                    <connections>
+                        <segue destination="aA3-FP-k58" kind="show" identifier="showMap" id="QTL-vz-0nP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xl-VP-0Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,4 +135,7 @@
         <image name="Tomorrow" width="25" height="25"/>
         <image name="Week" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QTL-vz-0nP"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -26,7 +26,7 @@ class TodayChartViewController: UIViewController, ChartViewDelegate, IAxisValueF
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.topItem?.title = "Today";
+        self.decoratePage()
         self.decorateChart(chart: self.todayChart)
         
         todayChart.delegate = self
@@ -57,6 +57,10 @@ class TodayChartViewController: UIViewController, ChartViewDelegate, IAxisValueF
             self.todayChart.data = data
         
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "Today";
     }
 
     override func didReceiveMemoryWarning() {

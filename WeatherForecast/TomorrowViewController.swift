@@ -23,9 +23,8 @@ class TomorrowViewController: UIViewController, ChartViewDelegate, IAxisValueFor
     @IBOutlet weak var tomorrowChartView: CombinedChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.navigationBar.topItem?.title = "Tomorrow"
         
+        self.decoratePage()
         self.decorateChart(chart: self.tomorrowChartView)
         
         tomorrowChartView.delegate = self
@@ -56,6 +55,10 @@ class TomorrowViewController: UIViewController, ChartViewDelegate, IAxisValueFor
             self.tomorrowChartView.data = data
             
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "Tomorrow"
     }
     
     override func didReceiveMemoryWarning() {

@@ -24,8 +24,7 @@ class WeekChartViewController: UIViewController, ChartViewDelegate, IAxisValueFo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.topItem?.title = "Week"
-        
+        self.decoratePage()
         self.decorateChart(chart: self.weekChart)
         
         weekChart.delegate = self
@@ -56,6 +55,10 @@ class WeekChartViewController: UIViewController, ChartViewDelegate, IAxisValueFo
             self.weekChart.data = data
             
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "Week"
     }
     
     override func didReceiveMemoryWarning() {

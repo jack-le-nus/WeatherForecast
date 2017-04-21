@@ -41,4 +41,19 @@ extension UIViewController {
         xAxis.axisMinimum = 0.0;
         xAxis.granularity = 1.0;
     }
+    
+    func openMap() {
+        self.performSegue(withIdentifier: "showMap", sender: nil)
+    }
+    
+    func decoratePage() {
+        let navigationBar = navigationController?.navigationBar
+        navigationBar?.barTintColor = UIColor(red: 17.0/255, green: 148.0/255, blue: 250.0/255, alpha: 1.0)
+        navigationBar?.barStyle = UIBarStyle.blackTranslucent
+        
+        let rightButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: nil)
+        rightButton.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = rightButton
+        self.navigationController?.navigationBar.items = [navigationItem]
+    }
 }

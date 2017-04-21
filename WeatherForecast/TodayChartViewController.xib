@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodayChartViewController" customModule="WeatherForecast" customModuleProvider="target">
+            <connections>
+                <outlet property="todayChart" destination="JNL-g3-Z6n" id="fda-eQ-Sic"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P5-O8-YHj">
+                    <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNL-g3-Z6n" customClass="CombinedChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="76" width="375" height="432"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="432" id="ENl-AE-ZaQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="leading" secondItem="1P5-O8-YHj" secondAttribute="leading" id="DT2-sS-GmV"/>
+                        <constraint firstAttribute="bottom" secondItem="JNL-g3-Z6n" secondAttribute="bottom" constant="107" id="PIw-a8-8Z4"/>
+                        <constraint firstAttribute="trailing" secondItem="JNL-g3-Z6n" secondAttribute="trailing" id="U01-KK-Y6U"/>
+                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="centerX" secondItem="1P5-O8-YHj" secondAttribute="centerX" id="YoE-Wa-wb5"/>
+                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="top" secondItem="1P5-O8-YHj" secondAttribute="top" constant="76" id="kth-2G-NGZ"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1P5-O8-YHj" secondAttribute="bottom" id="3mh-is-IZp"/>
+                <constraint firstAttribute="trailing" secondItem="1P5-O8-YHj" secondAttribute="trailing" id="9iq-Yc-11N"/>
+                <constraint firstItem="1P5-O8-YHj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h90-UD-IPM"/>
+                <constraint firstItem="1P5-O8-YHj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="ycM-Hk-r3I"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

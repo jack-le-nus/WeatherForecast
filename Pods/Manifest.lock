@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - ChartsRealm (3.0.2):
+    - Charts (~> 3.0.2)
+    - RealmSwift (~> 2.4)
+  - FlatUIKit (1.6.2)
+  - ObjectMapper (2.2.6)
+  - Realm (2.6.1):
+    - Realm/Headers (= 2.6.1)
+  - Realm/Headers (2.6.1)
+  - RealmSwift (2.6.1):
+    - Realm (= 2.6.1)
+  - SwiftDate (4.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - Charts
+  - ChartsRealm
+  - FlatUIKit
+  - RealmSwift
+  - SwiftDate
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  ChartsRealm: ed0332fd409298188a2b71e9548604165c987d42
+  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  Realm: 9abfd4f87519376daa5ae3a4603155de408bf8b3
+  RealmSwift: a54d3e8931cf7d3afa5a1fac9c8f88109d7f02b3
+  SwiftDate: ae615078806a322183e5f64e02e80ca8d939bf48
+
+PODFILE CHECKSUM: ca653cb63ff67bfcc0589f10448015cf2474b720
+
+COCOAPODS: 1.2.0

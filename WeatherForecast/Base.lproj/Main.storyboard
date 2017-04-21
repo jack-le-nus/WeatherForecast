@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Tomorrow-->
         <scene sceneID="ON8-JY-Qv3">
             <objects>
-                <viewController id="lO2-0s-zg7" sceneMemberID="viewController">
+                <viewController title="Tomorrow" id="lO2-0s-zg7" customClass="TomorrowViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fYt-xH-3hC"/>
                         <viewControllerLayoutGuide type="bottom" id="byL-dh-ifT"/>
@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="a6x-e9-x7j"/>
+                    <tabBarItem key="tabBarItem" title="Tomorrow" image="Tomorrow" selectedImage="Tomorrow" id="a6x-e9-x7j"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Icr-xe-nUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-444" y="-73"/>
         </scene>
-        <!--Item-->
+        <!--Week-->
         <scene sceneID="TDZ-dV-FZa">
             <objects>
-                <viewController id="das-qW-FcS" sceneMemberID="viewController">
+                <viewController title="Week" id="das-qW-FcS" customClass="WeekChartViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oPZ-HU-QPW"/>
                         <viewControllerLayoutGuide type="bottom" id="yKF-rH-Dzp"/>
@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4y5-RI-KH0"/>
+                    <tabBarItem key="tabBarItem" title="Week" image="Week" selectedImage="Week" id="4y5-RI-KH0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exf-mj-U2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +50,7 @@
         <!--Today-->
         <scene sceneID="2sr-co-8h1">
             <objects>
-                <viewController id="gZ8-jQ-dIv" customClass="TodayChartViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Today" id="gZ8-jQ-dIv" customClass="TodayChartViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dtl-r8-Ulg"/>
                         <viewControllerLayoutGuide type="bottom" id="wDb-dz-wRs"/>
@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Today" id="w3I-XQ-OTO"/>
+                    <tabBarItem key="tabBarItem" title="Today" image="Today" selectedImage="Today" id="w3I-XQ-OTO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xl-VP-0Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,4 +103,9 @@
             <point key="canvasLocation" x="-1396" y="-401"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Today" width="25" height="25"/>
+        <image name="Tomorrow" width="25" height="25"/>
+        <image name="Week" width="25" height="25"/>
+    </resources>
 </document>

@@ -1,8 +1,8 @@
 //
-//  TodayChartViewController.swift
+//  TomorrowViewController.swift
 //  WeatherForecast
 //
-//  Created by Jack Le on 20/4/17.
+//  Created by Jack Le on 21/4/17.
 //  Copyright © 2017 Jack Le. All rights reserved.
 //
 
@@ -10,33 +10,32 @@ import UIKit
 import RealmSwift
 import Charts
 
-class TodayChartViewController: UIViewController, ChartViewDelegate, IAxisValueFormatter {
-
+class TomorrowViewController: UIViewController, ChartViewDelegate, IAxisValueFormatter {
+    
     override var nibName: String? {
         get {
-            return "TodayChartViewController"
+            return "TomorrowViewController"
         }
     }
     
-    @IBOutlet weak var todayChart: CombinedChartView!
-
     var months : [String] = []
     var lists : [List] = []
-    
+    @IBOutlet weak var tomorrowChartView: CombinedChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController?.navigationBar.topItem?.title = "Tomorrow"
         
-        self.navigationController?.navigationBar.topItem?.title = "Today";
-        self.decorateChart(chart: self.todayChart)
+        self.decorateChart(chart: self.tomorrowChartView)
         
-        todayChart.delegate = self
-        todayChart.xAxis.valueFormatter = self;
+        tomorrowChartView.delegate = self
+        tomorrowChartView.xAxis.valueFormatter = self;
         
         let weatherForecastManager : WeatherForecastManager = WeatherForecastManager()
         weatherForecastManager.getWeatherForecast(completionHandler: { (weatherResponse) in
             
             let groupList : [[List]] = (weatherResponse.list?.groupBy{ $0.dt_nsdate.string(custom: Constants.DATE_FORMAT) })!
-            self.lists = groupList[0]
+            self.lists = groupList[1]
             self.months = self.lists.map {$0.dt_nsdate.string(custom: Constants.TIME_FORMAT)}
             
             var temperatureData: [ChartDataEntry] = []
@@ -53,12 +52,12 @@ class TodayChartViewController: UIViewController, ChartViewDelegate, IAxisValueF
             data = LineChartDecorator(decoratedChartData:data).decorate(dataEntries: [temperatureData])
             data = BarChartDecorator(decoratedChartData:data).decorate(dataEntries: [humidityData])
             
-            self.todayChart.xAxis.axisMaximum = data.xMax+0.25
-            self.todayChart.data = data
-        
+            self.tomorrowChartView.xAxis.axisMaximum = data.xMax+0.25
+            self.tomorrowChartView.data = data
+            
         })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

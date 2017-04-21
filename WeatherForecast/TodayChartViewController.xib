@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,22 +22,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P5-O8-YHj">
-                    <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNL-g3-Z6n" customClass="CombinedChartView" customModule="Charts">
-                            <rect key="frame" x="0.0" y="76" width="375" height="432"/>
+                            <rect key="frame" x="0.0" y="30" width="375" height="500.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="432" id="ENl-AE-ZaQ"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="leading" secondItem="1P5-O8-YHj" secondAttribute="leading" id="DT2-sS-GmV"/>
-                        <constraint firstAttribute="bottom" secondItem="JNL-g3-Z6n" secondAttribute="bottom" constant="107" id="PIw-a8-8Z4"/>
-                        <constraint firstAttribute="trailing" secondItem="JNL-g3-Z6n" secondAttribute="trailing" id="U01-KK-Y6U"/>
-                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="centerX" secondItem="1P5-O8-YHj" secondAttribute="centerX" id="YoE-Wa-wb5"/>
-                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="top" secondItem="1P5-O8-YHj" secondAttribute="top" constant="76" id="kth-2G-NGZ"/>
+                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="centerX" secondItem="1P5-O8-YHj" secondAttribute="centerX" id="7b1-LA-vLN"/>
+                        <constraint firstAttribute="bottom" secondItem="JNL-g3-Z6n" secondAttribute="bottom" constant="50" id="SiN-Zx-fDA"/>
+                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="top" secondItem="1P5-O8-YHj" secondAttribute="top" constant="30" id="Yk4-5L-Nwz"/>
+                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="leading" secondItem="1P5-O8-YHj" secondAttribute="leading" id="ZhY-q2-9hi"/>
+                        <constraint firstAttribute="trailing" secondItem="JNL-g3-Z6n" secondAttribute="trailing" id="hM6-Cm-G51"/>
+                        <constraint firstItem="JNL-g3-Z6n" firstAttribute="height" secondItem="1P5-O8-YHj" secondAttribute="height" multiplier="0.75" id="klZ-UN-aey"/>
                     </constraints>
                 </scrollView>
             </subviews>
@@ -45,7 +44,7 @@
                 <constraint firstAttribute="bottom" secondItem="1P5-O8-YHj" secondAttribute="bottom" id="3mh-is-IZp"/>
                 <constraint firstAttribute="trailing" secondItem="1P5-O8-YHj" secondAttribute="trailing" id="9iq-Yc-11N"/>
                 <constraint firstItem="1P5-O8-YHj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h90-UD-IPM"/>
-                <constraint firstItem="1P5-O8-YHj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="ycM-Hk-r3I"/>
+                <constraint firstItem="1P5-O8-YHj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ycM-Hk-r3I"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>

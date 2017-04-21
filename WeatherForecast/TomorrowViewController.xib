@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TomorrowViewController" customModule="WeatherForecast" customModuleProvider="target">
+            <connections>
+                <outlet property="tomorrowChartView" destination="BXN-fG-8tQ" id="PFM-t2-0Tw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCS-ie-bJh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXN-fG-8tQ" customClass="CombinedChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="30" width="375" height="501"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="BXN-fG-8tQ" firstAttribute="width" secondItem="LCS-ie-bJh" secondAttribute="width" id="A3T-RB-lOL"/>
+                        <constraint firstItem="BXN-fG-8tQ" firstAttribute="leading" secondItem="LCS-ie-bJh" secondAttribute="leading" id="Ba6-rJ-ZX7"/>
+                        <constraint firstAttribute="trailing" secondItem="BXN-fG-8tQ" secondAttribute="trailing" id="GVQ-IT-N9k"/>
+                        <constraint firstAttribute="bottom" secondItem="BXN-fG-8tQ" secondAttribute="bottom" constant="50" id="VKF-ct-4nI"/>
+                        <constraint firstItem="BXN-fG-8tQ" firstAttribute="height" secondItem="LCS-ie-bJh" secondAttribute="height" multiplier="0.75" id="q3p-jS-rpV"/>
+                        <constraint firstItem="BXN-fG-8tQ" firstAttribute="top" secondItem="LCS-ie-bJh" secondAttribute="top" constant="30" id="wo9-8v-J4H"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LCS-ie-bJh" secondAttribute="trailing" id="45e-db-Zxb"/>
+                <constraint firstItem="LCS-ie-bJh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ONS-Tg-gVI"/>
+                <constraint firstItem="LCS-ie-bJh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aGB-oi-OCm"/>
+                <constraint firstAttribute="bottom" secondItem="LCS-ie-bJh" secondAttribute="bottom" id="gI8-0J-Q33"/>
+            </constraints>
+            <point key="canvasLocation" x="58.5" y="81.5"/>
+        </view>
+    </objects>
+</document>

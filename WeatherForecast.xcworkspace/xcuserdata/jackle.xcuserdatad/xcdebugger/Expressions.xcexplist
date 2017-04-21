@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "TodayChartViewController.stringForValue(Double, axis : AxisBase?) -&gt; String:TodayChartViewController.swift">
+         contextName = "TodayChartViewController.(viewDidLoad() -&gt; ()).(closure #1):TodayChartViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "value">
+               value = "response.result.value">
             </PersistentString>
             <PersistentString
                value = "months">
@@ -14,13 +14,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "TodayChartViewController.generateBarData() -&gt; BarChartData:TodayChartViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.lists[index - 1].main?.humidity!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TodayChartViewController.(viewDidLoad() -&gt; ()).(closure #1).(closure #1):TodayChartViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "TodayChartViewController.(viewDidLoad() -&gt; ()).(closure #1):TodayChartViewController.swift">
+         contextName = "TomorrowViewController.(viewDidLoad() -&gt; ()).(closure #1):TomorrowViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "response.result.value">
+               value = "self.lists">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TodayChartViewController.stringForValue(Double, axis : AxisBase?) -&gt; String:TodayChartViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "value">
             </PersistentString>
             <PersistentString
                value = "months">
@@ -49,14 +65,6 @@
             </PersistentString>
             <PersistentString
                value = "d_nsdate">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "TodayChartViewController.generateBarData() -&gt; BarChartData:TodayChartViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.lists[index - 1].main?.humidity!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

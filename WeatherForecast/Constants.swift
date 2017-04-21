@@ -10,6 +10,7 @@ import Foundation
 
 class Constants {
     static var  DATE_FORMAT : String = "yyyy-MM-dd"
+    static var  SHORT_DATE_FORMAT : String = "dd-MM"
     static var  TIME_FORMAT : String = "HH:mm"
     static var  DATE_TIME_FORMAT : String = "yyyy-MM-dd HH:mm:ss"
 }

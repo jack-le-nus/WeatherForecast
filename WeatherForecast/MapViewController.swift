@@ -87,6 +87,10 @@ class MapViewController: UIViewController,UITextFieldDelegate,CLLocationManagerD
         myHomePin.title = txtAddress.text
         self.mapView.addAnnotation(myHomePin)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "Location"
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         WeatherForecastManager.sharedInstance.getWeatherForecast(lat:specifiedLocation.latitude, lon:specifiedLocation.longitude, completionHandler: { (weatherResponse) in

@@ -9,6 +9,8 @@
 import UIKit
 import RealmSwift
 import Charts
+import CoreLocation
+import MapKit
 
 class TodayChartViewController: UIViewController, ChartViewDelegate, IAxisValueFormatter {
 
@@ -19,7 +21,7 @@ class TodayChartViewController: UIViewController, ChartViewDelegate, IAxisValueF
     }
     
     @IBOutlet weak var todayChart: CombinedChartView!
-
+    
     var months : [String] = []
     var lists : [List] = []
     
@@ -29,38 +31,50 @@ class TodayChartViewController: UIViewController, ChartViewDelegate, IAxisValueF
         self.decoratePage()
         self.decorateChart(chart: self.todayChart)
         
+        updateChartData(CLLocationCoordinate2D())
+        
         todayChart.delegate = self
         todayChart.xAxis.valueFormatter = self;
-        
-        let weatherForecastManager : WeatherForecastManager = WeatherForecastManager()
-        weatherForecastManager.getWeatherForecast(completionHandler: { (weatherResponse) in
+    }
+    
+    func updateChartData(_ location : CLLocationCoordinate2D) {
+        WeatherForecastManager.sharedInstance.getWeatherForecast(lat:location.latitude, lon:location.longitude, completionHandler: { (weatherResponse) in
             
-            let groupList : [[List]] = (weatherResponse.list?.groupBy{ $0.dt_nsdate.string(custom: Constants.DATE_FORMAT) })!
-            self.lists = groupList[0]
-            self.months = self.lists.map {$0.dt_nsdate.string(custom: Constants.TIME_FORMAT)}
+            self.reloadChartData(weatherResponse:weatherResponse)
             
-            var temperatureData: [ChartDataEntry] = []
-            for index in 1...self.months.count {
-                temperatureData.append(ChartDataEntry(x: Double(index - 1), y: (self.lists[index - 1].main?.temp!)!))
-            }
-            
-            var humidityData: [ChartDataEntry] = []
-            for index in 1...self.months.count {
-                humidityData.append(BarChartDataEntry(x: Double(index - 1), y: (Double((self.lists[index - 1].main?.humidity!)!))))
-            }
-            
-            var data : CombinedChartData = CombinedChartData()
-            data = LineChartDecorator(decoratedChartData:data).decorate(dataEntries: [temperatureData])
-            data = BarChartDecorator(decoratedChartData:data).decorate(dataEntries: [humidityData])
-            
-            self.todayChart.xAxis.axisMaximum = data.xMax+0.25
-            self.todayChart.data = data
-        
         })
+    }
+    
+    func reloadChartData(weatherResponse : WeatherForecast) {
+        let groupList : [[List]] = (weatherResponse.list?.groupBy{ $0.dt_nsdate.string(custom: Constants.DATE_FORMAT) })!
+        self.lists = groupList[0]
+        self.months = self.lists.map {$0.dt_nsdate.string(custom: Constants.TIME_FORMAT)}
+        
+        //TODO: Should add more weather information: Pressure, Snow, Wind
+        var temperatureData: [ChartDataEntry] = []
+        for index in 1...self.months.count {
+            temperatureData.append(ChartDataEntry(x: Double(index - 1), y: (self.lists[index - 1].main?.temp!)!))
+        }
+        
+        var humidityData: [ChartDataEntry] = []
+        for index in 1...self.months.count {
+            humidityData.append(BarChartDataEntry(x: Double(index - 1), y: (Double((self.lists[index - 1].main?.humidity!)!))))
+        }
+        
+        var data : CombinedChartData = CombinedChartData()
+        data = LineChartDecorator(decoratedChartData:data).decorate(dataEntries: [temperatureData])
+        data = BarChartDecorator(decoratedChartData:data).decorate(dataEntries: [humidityData])
+        
+        self.todayChart.xAxis.axisMaximum = data.xMax+0.25
+        self.todayChart.data = data
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.topItem?.title = "Today";
+        if WeatherForecastManager.sharedInstance.weatherForeCast != nil {
+            reloadChartData(weatherResponse: WeatherForecastManager.sharedInstance.weatherForeCast!)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,6 +16,8 @@
 		BC7BEF031EAA302D002EBF73 /* TomorrowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7BEF011EAA302D002EBF73 /* TomorrowViewController.xib */; };
 		BC7BEF061EAA32D8002EBF73 /* WeekChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BEF041EAA32D8002EBF73 /* WeekChartViewController.swift */; };
 		BC7BEF071EAA32D8002EBF73 /* WeekChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7BEF051EAA32D8002EBF73 /* WeekChartViewController.xib */; };
+		BC7BEF0A1EAA4A64002EBF73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BEF081EAA4A64002EBF73 /* MapViewController.swift */; };
+		BC7BEF0B1EAA4A64002EBF73 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7BEF091EAA4A64002EBF73 /* MapViewController.xib */; };
 		BC8038D11EA8E5D400F56E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8038D01EA8E5D400F56E2A /* AppDelegate.swift */; };
 		BC8038D61EA8E5D400F56E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8038D41EA8E5D400F56E2A /* Main.storyboard */; };
 		BC8038D91EA8E5D400F56E2A /* WeatherForecast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8038D71EA8E5D400F56E2A /* WeatherForecast.xcdatamodeld */; };
@@ -72,6 +74,8 @@
 		BC7BEF011EAA302D002EBF73 /* TomorrowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TomorrowViewController.xib; sourceTree = "<group>"; };
 		BC7BEF041EAA32D8002EBF73 /* WeekChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekChartViewController.swift; sourceTree = "<group>"; };
 		BC7BEF051EAA32D8002EBF73 /* WeekChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekChartViewController.xib; sourceTree = "<group>"; };
+		BC7BEF081EAA4A64002EBF73 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BC7BEF091EAA4A64002EBF73 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		BC8038CD1EA8E5D400F56E2A /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8038D01EA8E5D400F56E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8038D51EA8E5D400F56E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 				BC7BEF011EAA302D002EBF73 /* TomorrowViewController.xib */,
 				BC7BEF041EAA32D8002EBF73 /* WeekChartViewController.swift */,
 				BC7BEF051EAA32D8002EBF73 /* WeekChartViewController.xib */,
+				BC7BEF081EAA4A64002EBF73 /* MapViewController.swift */,
+				BC7BEF091EAA4A64002EBF73 /* MapViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				BC8038DB1EA8E5D400F56E2A /* Assets.xcassets in Resources */,
 				BC8038D61EA8E5D400F56E2A /* Main.storyboard in Resources */,
 				BC7BEF071EAA32D8002EBF73 /* WeekChartViewController.xib in Resources */,
+				BC7BEF0B1EAA4A64002EBF73 /* MapViewController.xib in Resources */,
 				BC2281991EA902D200E996FA /* TodayChartViewController.xib in Resources */,
 				BC7BEF031EAA302D002EBF73 /* TomorrowViewController.xib in Resources */,
 			);
@@ -567,6 +574,7 @@
 				BCF4A63D1EA9E66D00A927C7 /* City.swift in Sources */,
 				BCF4A64B1EA9F4D700A927C7 /* SequenceType.swift in Sources */,
 				BCF4A6491EA9ECD100A927C7 /* DataTransformer.swift in Sources */,
+				BC7BEF0A1EAA4A64002EBF73 /* MapViewController.swift in Sources */,
 				BC8038D91EA8E5D400F56E2A /* WeatherForecast.xcdatamodeld in Sources */,
 				BCF4A6541EAA0FEF00A927C7 /* ChartBuilder.swift in Sources */,
 				BCF4A63E1EA9E66D00A927C7 /* Clouds.swift in Sources */,

@@ -11,12 +11,15 @@ import Alamofire
 import AlamofireObjectMapper
 
 class WeatherForecastManager {
-    func getWeatherForecast (completionHandler: @escaping (WeatherForecast) -> Void) {
-        Alamofire.request("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=50ae8daf0e0ed49417822836f623b00c").responseObject { (response: DataResponse<WeatherForecast>) in
+    static let sharedInstance = WeatherForecastManager()
+    public var weatherForeCast : WeatherForecast? = nil
+    func getWeatherForecast ( lat : Double,  lon : Double, completionHandler: @escaping (WeatherForecast) -> Void) {
+        let url : String = "http://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(lon)&APPID=50ae8daf0e0ed49417822836f623b00c"
+        Alamofire.request(url).responseObject { (response: DataResponse<WeatherForecast>) in
             switch response.result {
             case .success:
-                completionHandler(response.result.value!)
-                
+                self.weatherForeCast = response.result.value!
+                completionHandler(self.weatherForeCast!)
             case .failure(let error):
                 print(error)
             }

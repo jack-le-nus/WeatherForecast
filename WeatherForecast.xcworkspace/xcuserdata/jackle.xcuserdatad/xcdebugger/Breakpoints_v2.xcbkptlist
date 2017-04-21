@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherForecast/TodayChartViewController.swift"
-            timestampString = "514449060.739726"
+            timestampString = "514479319.933248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "TodayChartViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherForecast/UIViewControllerExtension.swift"
-            timestampString = "514466733.164512"
+            timestampString = "514478585.931751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "UIViewController"
             landmarkType = "4">
          </BreakpointContent>
@@ -167,13 +167,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherForecast/TomorrowViewController.swift"
-            timestampString = "514476373.593628"
+            filePath = "WeatherForecast/UIViewControllerExtension.swift"
+            timestampString = "514478585.931751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "decoratePage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -183,44 +183,92 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherForecast/WeekChartViewController.swift"
-            timestampString = "514476373.593628"
+            filePath = "WeatherForecast/MapViewController.swift"
+            timestampString = "514482922.400971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/MapViewController.swift"
+            timestampString = "514482922.400971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/UIViewControllerExtension.swift"
+            timestampString = "514478585.931751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "UIViewController"
+            landmarkType = "4">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/TodayChartViewController.swift"
+            timestampString = "514482658.870256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "updateChartData(_:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WeatherForecast.WeekChartViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  symbolName = "WeatherForecast.TodayChartViewController.updateChartData (__C.CLLocationCoordinate2D) -&gt; ()"
                   moduleName = "WeatherForecast"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/WeekChartViewController.swift"
-                  timestampString = "514471655.168724"
+                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/TodayChartViewController.swift"
+                  timestampString = "514480004.678157"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "321">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "22">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WeatherForecast.WeekChartViewController.(viewDidLoad () -&gt; ()).(closure #1).(closure #2)"
+                  symbolName = "WeatherForecast.TodayChartViewController.(updateChartData (__C.CLLocationCoordinate2D) -&gt; ()).(closure #1)"
                   moduleName = "WeatherForecast"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/WeekChartViewController.swift"
-                  timestampString = "514471655.171268"
+                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/TodayChartViewController.swift"
+                  timestampString = "514480004.680825"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "27">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -231,14 +279,221 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherForecast/WeekChartViewController.swift"
-            timestampString = "514476373.593628"
+            filePath = "WeatherForecast/TomorrowViewController.swift"
+            timestampString = "514482978.858066"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/UIViewControllerExtension.swift"
+            timestampString = "514479815.732347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "decoratePage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/UIViewControllerExtension.swift"
+            timestampString = "514479817.682471"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "decoratePage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/UIViewControllerExtension.swift"
+            timestampString = "514479839.306731"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "decoratePage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/WeatherForecastManager.swift"
+            timestampString = "514482658.870256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getWeatherForecast(lat:lon:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecast.WeatherForecastManager.getWeatherForecast (lat : Swift.Double, lon : Swift.Double, completionHandler : (WeatherForecast.WeatherForecast) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/WeatherForecastManager.swift"
+                  timestampString = "514480492.81568"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "383">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecast.WeatherForecastManager.(getWeatherForecast (lat : Swift.Double, lon : Swift.Double, completionHandler : (WeatherForecast.WeatherForecast) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "WeatherForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/WeatherForecastManager.swift"
+                  timestampString = "514480492.818452"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "153">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/WeatherForecastManager.swift"
+            timestampString = "514482658.870256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getWeatherForecast(lat:lon:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/TodayChartViewController.swift"
+            timestampString = "514482658.870256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "updateChartData(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecast.TodayChartViewController.(updateChartData (__C.CLLocationCoordinate2D) -&gt; ()).(closure #1)"
+                  moduleName = "WeatherForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/TodayChartViewController.swift"
+                  timestampString = "514480120.345496"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecast.TodayChartViewController.(updateChartData (__C.CLLocationCoordinate2D) -&gt; ()).(closure #1)"
+                  moduleName = "WeatherForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/TodayChartViewController.swift"
+                  timestampString = "514480120.348667"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "4004">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecast.TodayChartViewController.(updateChartData (__C.CLLocationCoordinate2D) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "WeatherForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackle/Documents/Workspace/WeatherForecast/WeatherForecast/TodayChartViewController.swift"
+                  timestampString = "514480120.352085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/WeatherForecastManager.swift"
+            timestampString = "514482658.870256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "WeatherForecastManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecast/WeatherForecastManager.swift"
+            timestampString = "514482119.759809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "WeatherForecastManager"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

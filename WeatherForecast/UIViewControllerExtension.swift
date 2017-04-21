@@ -9,7 +9,13 @@
 import Foundation
 import Charts
 
+protocol NavigationBackDelegate {
+    func setResult(valueSent: Any)
+}
+
+
 extension UIViewController {
+    
     func decorateChart(chart : CombinedChartView) {
         chart.chartDescription?.enabled = false
         chart.drawGridBackgroundEnabled = false
@@ -51,7 +57,7 @@ extension UIViewController {
         navigationBar?.barTintColor = UIColor(red: 17.0/255, green: 148.0/255, blue: 250.0/255, alpha: 1.0)
         navigationBar?.barStyle = UIBarStyle.blackTranslucent
         
-        let rightButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: nil)
+        let rightButton = UIBarButtonItem(image: UIImage(named: "Location"), style: .plain, target: self, action: #selector(openMap))
         rightButton.tintColor = UIColor.white
         navigationItem.rightBarButtonItem = rightButton
         self.navigationController?.navigationBar.items = [navigationItem]

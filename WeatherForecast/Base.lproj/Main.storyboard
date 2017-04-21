@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="-444" y="-73"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="dWL-1e-VZg">
             <objects>
-                <viewController id="aA3-FP-k58" sceneMemberID="viewController">
+                <viewController id="aA3-FP-k58" customClass="MapViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UDr-FV-m7P"/>
                         <viewControllerLayoutGuide type="bottom" id="F8c-TR-uik"/>

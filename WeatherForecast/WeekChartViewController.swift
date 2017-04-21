@@ -9,9 +9,11 @@
 import UIKit
 import RealmSwift
 import Charts
+import CoreLocation
 
 class WeekChartViewController: UIViewController, ChartViewDelegate, IAxisValueFormatter {
     
+    let weatherForecastManager : WeatherForecastManager = WeatherForecastManager()
     override var nibName: String? {
         get {
             return "WeekChartViewController"
@@ -24,41 +26,44 @@ class WeekChartViewController: UIViewController, ChartViewDelegate, IAxisValueFo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.decoratePage()
         self.decorateChart(chart: self.weekChart)
         
         weekChart.delegate = self
         weekChart.xAxis.valueFormatter = self;
         
-        let weatherForecastManager : WeatherForecastManager = WeatherForecastManager()
-        weatherForecastManager.getWeatherForecast(completionHandler: { (weatherResponse) in
-            
-            let groupList : [[List]] = (weatherResponse.list?.groupBy{ $0.dt_nsdate.string(custom: Constants.DATE_FORMAT) })!
-            self.lists = groupList.map {$0[0]}
-            self.months = self.lists.map {$0.dt_nsdate.string(custom: Constants.SHORT_DATE_FORMAT)}
-            
-            var temperatureData: [ChartDataEntry] = []
-            for index in 1...self.months.count {
-                temperatureData.append(ChartDataEntry(x: Double(index - 1), y: (self.lists[index - 1].main?.temp!)!))
-            }
-            
-            var humidityData: [ChartDataEntry] = []
-            for index in 1...self.months.count {
-                humidityData.append(BarChartDataEntry(x: Double(index - 1), y: (Double((self.lists[index - 1].main?.humidity!)!))))
-            }
-            
-            var data : CombinedChartData = CombinedChartData()
-            data = LineChartDecorator(decoratedChartData:data).decorate(dataEntries: [temperatureData])
-            data = BarChartDecorator(decoratedChartData:data).decorate(dataEntries: [humidityData])
-            
-            self.weekChart.xAxis.axisMaximum = data.xMax+0.25
-            self.weekChart.data = data
-            
-        })
+        weekChart.delegate = self
+        weekChart.xAxis.valueFormatter = self;
+    }
+    
+    func reloadChartData(weatherResponse : WeatherForecast) {
+        let groupList : [[List]] = (weatherResponse.list?.groupBy{ $0.dt_nsdate.string(custom: Constants.DATE_FORMAT) })!
+        self.lists = groupList.map {$0[0]}
+        self.months = self.lists.map {$0.dt_nsdate.string(custom: Constants.SHORT_DATE_FORMAT)}
+        
+        var temperatureData: [ChartDataEntry] = []
+        for index in 1...self.months.count {
+            temperatureData.append(ChartDataEntry(x: Double(index - 1), y: (self.lists[index - 1].main?.temp!)!))
+        }
+        
+        var humidityData: [ChartDataEntry] = []
+        for index in 1...self.months.count {
+            humidityData.append(BarChartDataEntry(x: Double(index - 1), y: (Double((self.lists[index - 1].main?.humidity!)!))))
+        }
+        
+        var data : CombinedChartData = CombinedChartData()
+        data = LineChartDecorator(decoratedChartData:data).decorate(dataEntries: [temperatureData])
+        data = BarChartDecorator(decoratedChartData:data).decorate(dataEntries: [humidityData])
+        
+        self.weekChart.xAxis.axisMaximum = data.xMax+0.25
+        self.weekChart.data = data
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.topItem?.title = "Week"
+        if WeatherForecastManager.sharedInstance.weatherForeCast != nil {
+            reloadChartData(weatherResponse: WeatherForecastManager.sharedInstance.weatherForeCast!)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
